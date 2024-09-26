@@ -18,3 +18,31 @@ int main(){
     printf("f(m,n)=%d\n",f(m,n));
     return 0;
 }
+
+
+//我的错误代码
+/*#include<stdio.h>
+
+int f(int m,int n){
+    if(m==1 || m==0){
+        return 1;
+    }   
+    else if(n==1){
+        return 1;
+    }
+    else if(n>=m){
+        return f(m,m);
+    }   
+    else{
+        return f(m-n,n)+f(m,n-1);
+    }   
+}
+
+int main(){
+    int m,n;
+    printf("请输入m n，以空格隔开\n");
+    scanf("%d %d",&m,&n);
+    printf("f(m,n)=%d\n",f(m,n));
+    return 0;
+}
+*/
