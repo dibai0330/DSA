@@ -15,11 +15,14 @@ int main(){
 
     //更改数组的大小，假设每次增加的大小 deta_n = 20
     printf("请输入需要增加的数组的大小\n");
-    scanf("%d", &i);
+    int deta;
+    scanf("%d", &deta);
+    int now_use = n;
     int new_size = n;
     int count = 0;  //计数器
-    for(int j=0; j<=i; j++){ 
-        if((n+j) >= new_size){
+    for(int j=0; j<=deta; j++){ 
+        now_use = n+j;
+        if(now_use >= new_size){
             new_size *= 2;
             int* array2 = (int*)malloc(new_size * sizeof(int));
             //不妨将array2中的数据初始化为0
@@ -40,9 +43,9 @@ int main(){
     }
     
     //打印更新后array1中的数据
-    for(i=0; i<new_size; i++){
-    printf("%-3d ", array1[i]);
-    }
+    //for(i=0; i<new_size; i++){
+    //printf("%-3d ", array1[i]);
+    //}
     printf("\n%d",count);
     return 0;
 }

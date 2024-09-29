@@ -41,9 +41,9 @@ int main(){
     }
     
     //打印更新后array1中的数据
-    for(i=0; i<new_size; i++){
-    printf("%-3d ", array1[i]);
-    }
+    //for(i=0; i<new_size; i++){
+    //printf("%-3d ", array1[i]);
+    //}
     printf("\n%d",count);
     return 0;
 }
