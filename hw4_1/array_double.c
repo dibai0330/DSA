@@ -13,14 +13,13 @@ int main(){
         array1[i] = i;
     }
 
-    //更改数组的大小，每次翻倍
-    int deta;
+    //更改数组的大小，假设每次增加的大小 deta_n = 20
     printf("请输入需要增加的数组的大小\n");
-    scanf("%d", &deta);
+    scanf("%d", &i);
     int new_size = n;
     int count = 0;  //计数器
-    for(int j=0; j<=deta; j++){ 
-        if((j+n) >= new_size){
+    for(int j=0; j<=i; j++){ 
+        if((n+j) >= new_size){
             new_size *= 2;
             int* array2 = (int*)malloc(new_size * sizeof(int));
             //不妨将array2中的数据初始化为0

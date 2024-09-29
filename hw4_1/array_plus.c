@@ -34,7 +34,7 @@ int main(){
                count ++;
             }
             
-            //最后释放array1,将array1指向array2
+            //最后释放array1,将array1更新为array2
             free(array1);
             array1 = array2;
         }
