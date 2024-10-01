@@ -30,12 +30,12 @@ void insert(Node* head){
     printf("\n");
 }
 
-int number_loop(Node* head, int n){
+Node* number_loop(Node* head, int n){
     //输入n，返回指向第n个元素的指针，循环实现
     int i;
     if(n<=0){
         printf("error,请输入正确的数值\t");
-        return 0;
+        return NULL;
     }
     else{
         Node* p = head->next;
@@ -46,18 +46,18 @@ int number_loop(Node* head, int n){
                 return 0;
             }    
         }
-        return p->info;
+        return p;
     }
 }
 
-int number_recursion(Node* head, int n){
+Node* number_recursion(Node* head, int n){
     //输入n，返回指向第n个元素的指针，递归实现
     if(n<1 || head==NULL){
         printf("error,请输入正确的数值\t"); 
         return 0;
     }
     else if(n==1){
-        return head->info;
+        return head;
     }
     return number_recursion(head->next, n-1);
 }
@@ -72,9 +72,9 @@ int main(){
     int number;     //返回的元素序号，1-base
     printf("请输入要返回第几个元素(1-n)\n");
     scanf("%d",&number);
-    printf("链表中第%d个元素是%d\n", number, number_loop(head,number));
+    printf("链表中第%d个元素的地址是%d\n", number, number_loop(head,number));
     //因为递归时数据结构需具有一致性，所以视作无表头的链表，找到第n+1个元素
-    printf("链表中第%d个元素是%d\n", number, number_recursion(head,number+1));  
+    printf("链表中第%d个元素的地址是%d\n", number, number_recursion(head,number+1));  
 
     return 0;
 }
